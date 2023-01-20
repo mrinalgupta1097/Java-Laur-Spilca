@@ -1,0 +1,14 @@
+Object Class :
+    - root of class hierarchy
+    - not an abstract class
+
+toString() :
+    - returns string implementation of object
+    - if not overridden hash of object will be printed
+
+getClass() :
+    - returns class instance of class
+    - entry point for reflection
+
+hashcode() :
+    - never declared without equals
