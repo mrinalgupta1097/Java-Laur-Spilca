@@ -1,0 +1,7 @@
+ArithmeticException :
+    -runtime exception
+
+try-catch-finally :
+    - using try with finally is not considered as exception handling
+    - in two cases finally won't execute; system crash and system.exit() is called
+    - finally will be executed even after return statement
