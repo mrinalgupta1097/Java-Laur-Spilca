@@ -1,6 +1,6 @@
-package com.mrinalgupta.exceptions;
+package com.mrinalgupta.exceptions.basics;
 
-public class Example3 {
+public class ReturnConflict {
     public static void main(String[] args) {
         int x = m();
         System.out.println(x);

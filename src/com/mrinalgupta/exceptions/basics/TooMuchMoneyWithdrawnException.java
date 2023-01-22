@@ -1,4 +1,4 @@
-package com.mrinalgupta.exceptions;
+package com.mrinalgupta.exceptions.basics;
 
 public class TooMuchMoneyWithdrawnException extends Exception{
 

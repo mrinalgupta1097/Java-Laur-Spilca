@@ -1,8 +1,8 @@
-package com.mrinalgupta.exceptions;
+package com.mrinalgupta.exceptions.basics;
 
 public class AccountController {
     private static final double MAX_AMOUNT = 100;
-    public void withdraw(double amount) throws TooMuchMoneyWithdrawnException{
+    public void withdraw(double amount) throws TooMuchMoneyWithdrawnException {
         if(amount > MAX_AMOUNT){
             throw new TooMuchMoneyWithdrawnException("Account has insufficient balance");
         }

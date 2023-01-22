@@ -1,7 +1,5 @@
 package com.mrinalgupta.exceptions.inheritance;
 
-import com.mrinalgupta.exceptions.TooMuchMoneyWithdrawnException;
-
 public class C implements I1{
     @Override
     public void m() {
