@@ -1,4 +1,4 @@
-package com.mrinalgupta.collections;
+package com.mrinalgupta.collections.Lists;
 
 import java.util.*;
 

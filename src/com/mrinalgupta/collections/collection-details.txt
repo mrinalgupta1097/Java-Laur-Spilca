@@ -5,7 +5,8 @@ Collection Framework :
 Collection Interface :
     - implemented by
           List<E>  : always ordered, indexed, can contain duplicates.
-            - ArrayList<E>, LinkedList<E>
+            - ArrayList<E> : implements array internally, dynamic sizing.
+            - LinkedList<E>
         , Set<E>   : HashSet<E>, LinkedHashSet<E>, TreeSet<E>
         , Deque<E> : ArrayDeque<E>
         , Queue<E> :
@@ -15,3 +16,7 @@ Map<E> :
           HashMap<E> : No order
         , LinkedHashMap<E> : Insertion order
         , TreeMap<E> : order mentioned by comparator
+
+
+For-Each :
+    - enhancing collection while iterating it gives concurrentModificationException
