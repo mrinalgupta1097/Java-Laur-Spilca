@@ -4,9 +4,11 @@ Collection Framework :
 
 Collection Interface :
     - implemented by
+
           List<E>  : always ordered, indexed, can contain duplicates.
             - ArrayList<E> : implements array internally, dynamic sizing.
             - LinkedList<E>
+
           Set<E>   : not (always) ordered
             - HashSet<E> :
                 - does not guarantee order
@@ -16,10 +18,11 @@ Collection Interface :
                 - Maintains doubly linked list throughout implementation
                 - Preserve insertion order
                 -
-
             - TreeSet<E>
-        , Deque<E> : ArrayDeque<E>
-        , Queue<E> :
+                - sorted set
+                - implements NavigableSet<> -> SortedSet<> -> Set<>
+          Deque<E> : ArrayDeque<E>
+          Queue<E> :
 
 Map<E> :
     - implemented by
