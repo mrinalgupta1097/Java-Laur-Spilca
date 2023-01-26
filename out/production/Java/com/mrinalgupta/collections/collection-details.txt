@@ -7,7 +7,17 @@ Collection Interface :
           List<E>  : always ordered, indexed, can contain duplicates.
             - ArrayList<E> : implements array internally, dynamic sizing.
             - LinkedList<E>
-        , Set<E>   : HashSet<E>, LinkedHashSet<E>, TreeSet<E>
+          Set<E>   : not (always) ordered
+            - HashSet<E> :
+                - does not guarantee order
+                - allows null
+                - not sorted
+            - LinkedHashSet<E> : HashTable and LinkedList implementation of set
+                - Maintains doubly linked list throughout implementation
+                - Preserve insertion order
+                -
+
+            - TreeSet<E>
         , Deque<E> : ArrayDeque<E>
         , Queue<E> :
 
