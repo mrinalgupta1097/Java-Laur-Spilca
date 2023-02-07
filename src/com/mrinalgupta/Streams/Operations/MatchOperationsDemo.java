@@ -1,8 +1,8 @@
-package com.mrinalgupta.Streams;
+package com.mrinalgupta.Streams.Operations;
 
 import java.util.List;
 
-public class StreamOperationsDemo1 {
+public class MatchOperationsDemo {
     public static void main(String[] args) {
         List<Integer> list = List.of(1, 5, 6, 3, 8, 9);
 
