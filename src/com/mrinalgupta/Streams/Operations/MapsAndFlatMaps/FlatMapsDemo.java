@@ -1,4 +1,4 @@
-package com.mrinalgupta.Streams.Operations;
+package com.mrinalgupta.Streams.Operations.MapsAndFlatMaps;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,10 +12,10 @@ public class FlatMapsDemo {
         );
 
         /*
-        * flatMap()
-        * flatMapToInt()
-        * flatMapToDouble
-        * flatMapToLong()
+         * flatMap()
+         * flatMapToInt()
+         * flatMapToDouble
+         * flatMapToLong()
          */
 
         System.out.println(list.stream()

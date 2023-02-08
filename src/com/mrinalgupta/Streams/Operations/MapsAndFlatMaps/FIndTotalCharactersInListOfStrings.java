@@ -1,4 +1,4 @@
-package com.mrinalgupta.Streams.Operations;
+package com.mrinalgupta.Streams.Operations.MapsAndFlatMaps;
 
 import java.util.Arrays;
 import java.util.List;

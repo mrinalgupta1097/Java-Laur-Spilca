@@ -1,4 +1,4 @@
-package com.mrinalgupta.Streams;
+package com.mrinalgupta.Streams.Basics;
 
 import java.util.List;
 
