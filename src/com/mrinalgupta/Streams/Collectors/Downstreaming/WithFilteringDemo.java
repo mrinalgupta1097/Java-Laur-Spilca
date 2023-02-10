@@ -19,6 +19,7 @@ public class WithFilteringDemo {
                 .collect(Collectors.mapping(String::length,
                         Collectors.filtering(len -> len % 2 == 0, Collectors.toList())
                 ));
+        System.out.println(result);
 
         /*
         * above code is similar to
