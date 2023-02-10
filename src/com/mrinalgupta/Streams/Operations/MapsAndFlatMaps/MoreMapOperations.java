@@ -25,7 +25,8 @@ public class MoreMapOperations {
 
         var x = list.stream()
                 .mapToInt(String::length)
-                .mapToObj(s -> s)
+                // boxed is similar to mapToObj()
+                .boxed()
                 .reduce(0, Integer::sum);
         System.out.println(x);
     }
