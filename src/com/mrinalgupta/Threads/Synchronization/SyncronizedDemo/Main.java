@@ -1,4 +1,4 @@
-package com.mrinalgupta.Threads.SyncronizedDemo;
+package com.mrinalgupta.Threads.Synchronization.SyncronizedDemo;
 
 
 import java.util.ArrayList;

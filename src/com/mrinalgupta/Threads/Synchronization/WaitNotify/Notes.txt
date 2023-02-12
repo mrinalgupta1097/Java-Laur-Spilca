@@ -1,0 +1,8 @@
+Monitors -
+    -A monitor is something a thread can grab and hold,
+     preventing all other threads from grabbing that same monitor
+     and forcing them to wait until the monitor is released.
+     This is what a synchronized block does.
+
+    - they provide object based locking and unlocking
+    - In case of synchronized methods, lock is associated with the object whose method is being called.
