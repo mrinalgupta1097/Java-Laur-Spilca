@@ -1,0 +1,48 @@
+Problem with Threads:
+    - when the same resource is shared by multiple threads, thread interference and consistency
+        problems arise.
+
+Thread Interference:
+    - it explains how the errors are introduced when multiple threads share resources
+    - consider this scenario
+
+        class Counter {
+            private int c = 0;
+
+            public void increment() {
+                c++;
+            }
+
+            public void decrement() {
+                c--;
+            }
+
+            public int value() {
+                return c;
+            }
+
+        }
+    - Each invocation of increment() will increase and decrement() will decrease the value of c by 1.
+        But when multiple threads try to invoke these methods, expected behaviour may not occur.
+    - Let's take the example of increment(). It involves the following steps at basic level
+        1. Retrieve the current value of c.
+        2. Increment the retrieved value by 1.
+        3. Store the incremented value back in c.
+
+        Suppose Thread A invokes increment at about the same time Thread B invokes decrement.
+         If the initial value of c is 0, their interleaved actions might follow this sequence:
+
+        Thread A: Retrieve c.
+        Thread B: Retrieve c.
+        Thread A: Increment retrieved value; result is 1.
+        Thread B: Decrement retrieved value; result is -1.
+        Thread A: Store result in c; c is now 1.
+        Thread B: Store result in c; c is now -1.
+
+        Result of Thread A is ignored, overwritten by Thread B. There are many possibilities that exist.
+
+Memory Inconsistency:
+     - threads have different views of same data
+     -The key to avoiding memory consistency errors is understanding the happens-before relationship.
+        This relationship is simply a guarantee that memory writes by one specific statement
+        are visible to another specific statement.

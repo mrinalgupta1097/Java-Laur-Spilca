@@ -36,7 +36,7 @@ public class SummarizingDemo {
 
         System.out.println(list.stream().collect(
                 Collectors.summarizingInt(String::length)
-        ));
+        )); //IntSummaryStatistics{count=6, sum=22, min=1, average=3.666667, max=6}
 
     }
 }
