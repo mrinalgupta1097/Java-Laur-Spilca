@@ -8,10 +8,10 @@ public class Consumer extends Thread {
     @Override
     public void run() {
         while (true) {
-            synchronized (Main.bucket) { //decide the monitor
-                if (!Main.bucket.isEmpty()) {
-                    int n = Main.bucket.get(0);
-                    Main.bucket.remove(0);
+            synchronized (com.mrinalgupta.Threads.SyncronizedDemo.Main.bucket) { //decide the monitor
+                if (!com.mrinalgupta.Threads.SyncronizedDemo.Main.bucket.isEmpty()) {
+                    int n = com.mrinalgupta.Threads.SyncronizedDemo.Main.bucket.get(0);
+                    com.mrinalgupta.Threads.SyncronizedDemo.Main.bucket.remove(0);
                     System.out.println(Thread.currentThread().getName() +
                             " removed the value " + n + " from the bucket.");
                 }
