@@ -1,6 +1,5 @@
 package com.mrinalgupta.Threads.SyncronizedDemo;
 
-import com.mrinalgupta.Exceptions.inheritance.A;
 
 import java.util.ArrayList;
 import java.util.List;
