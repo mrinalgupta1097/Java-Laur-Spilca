@@ -2,7 +2,7 @@ package com.mrinalgupta.Threads.CreatingThreads;
 
 public class Main {
     public static void main(String[] args) {
-        com.mrinalgupta.Threads.CreatingThreads.EvenNumbersThread t1 = new com.mrinalgupta.Threads.CreatingThreads.EvenNumbersThread();
+        EvenNumbersThread t1 = new EvenNumbersThread();
         /*
          * start() : is used to start the thread execution
          * as soon as the thread starts, JVM calls run() method of thread and performs the tasks
