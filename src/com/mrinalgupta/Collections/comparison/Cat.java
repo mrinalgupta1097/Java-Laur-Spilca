@@ -1,4 +1,4 @@
-package com.mrinalgupta.Collections.comparison;
+package com.mrinalgupta.collections.comparison;
 
 public class Cat implements Comparable<Cat> {
     private int age;
@@ -20,12 +20,12 @@ public class Cat implements Comparable<Cat> {
         // negative : if current object is smaller than parameter
         // 0 : if both are equal
         // positive : if current object is bigger than parameter
-//        if (this.age < o.age)
-//            return -1;
-//        else if (this.age > o.age) {
-//            return 1;
-//        }
-//        return 0;
+        // if (this.age < o.age)
+        // return -1;
+        // else if (this.age > o.age) {
+        // return 1;
+        // }
+        // return 0;
         return this.age - o.age;
 
     }

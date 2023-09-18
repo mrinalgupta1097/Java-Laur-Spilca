@@ -17,5 +17,12 @@ public class StreamExample {
         list.stream()
                 .filter(x -> x%2 ==0)  // takes predicate
                 .forEach(System.out::println); // takes consumer
+        int i=0;
+        while(i<10)
+        {
+            i=i+1;
+            System.out.print(i);
+            i=i+1;
+        }
     }
 }
