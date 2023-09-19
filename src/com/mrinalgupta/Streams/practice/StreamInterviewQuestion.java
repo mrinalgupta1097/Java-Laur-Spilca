@@ -29,40 +29,64 @@ public class StreamInterviewQuestion {
     employeeList.add(new Employee(277, "Anuja", 32, "Female", "Development", 2012, 38000.0));
 
     // find no of male and no of female employee and return result as map
-    Map<String, Long> genderCount =
-        employeeList.stream()
-            .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-    System.out.println(genderCount);
+    findMaleAndFemaleEmployee();
 
     // print every department in company
     System.out.println();
     System.out.println("print every department in company");
-    employeeList.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
+    printEveryDepartment();
 
     // average age of employees
     System.out.println();
     System.out.println("average age of employees");
-    System.out.println(employeeList.stream().mapToInt(Employee::getAge).average().getAsDouble());
+    averageAgeInCompany();
+
     // or
     System.out.println("average age of employees: using collectors");
     System.out.println(employeeList.stream().collect(Collectors.averagingInt(Employee::getAge)));
+
     // average age by genders
     System.out.println("average age of employees: by gender");
-    System.out.println(
-        employeeList.stream()
-            .collect(
-                Collectors.groupingBy(
-                    Employee::getGender, Collectors.averagingInt(Employee::getAge))));
+    averageAgeByGender();
+
     // highest paid employee
     System.out.println();
     System.out.println("highest paid employee");
-    employeeList.stream()
-            .sorted(Comparator.comparing(Employee::getSalary).reversed())
-            .map(Employee::getName).limit(1).forEach(System.out::println);
+    highestSalaryEmployee();
     System.out.println(
         employeeList.stream()
             .collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary)))
             .get()
             .getName());
   }
+
+  private static void highestSalaryEmployee() {
+    employeeList.stream()
+            .sorted(Comparator.comparing(Employee::getSalary).reversed())
+            .map(Employee::getName).limit(1).forEach(System.out::println);
+  }
+
+  private static void averageAgeByGender() {
+    System.out.println(
+        employeeList.stream()
+            .collect(
+                Collectors.groupingBy(
+                    Employee::getGender, Collectors.averagingInt(Employee::getAge))));
+  }
+
+  private static void averageAgeInCompany() {
+    System.out.println(employeeList.stream().mapToInt(Employee::getAge).average().getAsDouble());
+  }
+
+  private static void printEveryDepartment() {
+    employeeList.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
+  }
+
+  private static void findMaleAndFemaleEmployee() {
+    Map<String, Long> genderCount =
+        employeeList.stream()
+            .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+    System.out.println(genderCount);
+  }
+
 }
