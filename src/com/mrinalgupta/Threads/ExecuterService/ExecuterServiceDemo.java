@@ -14,7 +14,7 @@ public class ExecuterServiceDemo {
         try {
             System.out.println(nThreads);
             executerService.execute(() -> System.out.println(":)" + Thread.currentThread().getName()));
-            executerService.execute(() -> System.out.println(":(" + Thread.currentThread().getName()));¡
+            executerService.execute(() -> System.out.println(":(" + Thread.currentThread().getName()));
         } finally {
             //shutting down the executer service (mandatory else Garbage collection won't happen)
             //write it in finally block in good practice
