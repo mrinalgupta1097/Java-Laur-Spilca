@@ -17,7 +17,6 @@ public class CustomComparison {
 //                .forEach(cat -> System.out.println(cat.getAge()));
 
         System.out.println("-------reverse  order comparison------");
-        s.sorted(Comparator.reverseOrder())
-                .forEach(cat-> System.out.println(cat.getAge()));
+        s.sorted(Comparator.reverseOrder()).forEach(cat -> System.out.println(cat.getAge()));
     }
 }

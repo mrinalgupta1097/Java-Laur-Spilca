@@ -9,7 +9,6 @@ public class CollectToMapDemo {
     public static void main(String[] args) {
         List<String> list = List.of("AAA", "B", "CCCCC", "DDDD", "FFFFFF");
         Map<String, Integer> map = list.stream()
-                .sorted(Comparator.comparing(k -> k.toString().length()))
                 .collect(Collectors.toMap(
                         k -> k,
                         String::length));

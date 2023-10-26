@@ -1,6 +1,7 @@
 package com.mrinalgupta.Streams.Operations.RemainingOperations;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class SkipPeekDemo {
@@ -12,6 +13,7 @@ public class SkipPeekDemo {
                 .filter(n -> n % 2 == 0)
                 .skip(2)
                 .count());
+
 
         //peek() : do not use peek() to change values outside of input stream
         List<Integer> list2 = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
